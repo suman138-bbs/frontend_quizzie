@@ -279,7 +279,7 @@ const QuestionAnsForm = ({ name }) => {
         <h3>Congrats your Quiz is Published!</h3>
         <input
           type="text"
-          value={`http://localhost:5173/live-quiz/${quizSuccess.id}`}
+          value={`https://frontend-quizzie-m83lkudly-suman138-bbs.vercel.app/${quizSuccess.id}`}
           ref={urlRef}
         />
         <div>

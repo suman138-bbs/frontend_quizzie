@@ -49,7 +49,7 @@ const Analytics = () => {
 
   const handleShare = (id, type) => {
     const url = type === "quiz" ? "/live-quiz" : "/live-poll";
-    const itemURL = `${`http://localhost:5173`}${url}/${id}`;
+    const itemURL = `${`https://frontend-quizzie-m83lkudly-suman138-bbs.vercel.app/`}${url}/${id}`;
     navigator.clipboard
       .writeText(itemURL)
       .then(() => {
