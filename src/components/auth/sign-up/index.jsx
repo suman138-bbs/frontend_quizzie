@@ -28,6 +28,11 @@ const SignUp = () => {
     } else if (!isValidEmail(data.email)) {
       setErrors("Please provide a valid email address");
       return;
+    } else if (data.password !== data.confirmPassword) {
+      setErrors(
+        "Password and Confirm Password do not match. Please make sure they are the same"
+      );
+      return;
     }
     try {
       const { name, email, password } = data;
