@@ -48,7 +48,7 @@ const Analytics = () => {
   }, []);
 
   const handleShare = (id, type) => {
-    const url = type === "quiz" ? "/live-quiz" : "/live-poll";
+    const url = type === "quiz" ? "live-quiz" : "live-poll";
     const itemURL = `${`https://quizzie123.netlify.app/`}${url}/${id}`;
     navigator.clipboard
       .writeText(itemURL)
