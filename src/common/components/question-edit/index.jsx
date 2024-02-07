@@ -80,7 +80,7 @@ const EditQuestion = ({ analysisId }) => {
           <h4>Options</h4>
           <div>
             {quiz.questionsAnswer[current].options.map(
-              ({ _id, option, imageUrl }, optionIndex) => {
+              ({ _id, option, imageUrl, type }, optionIndex) => {
                 return (
                   <div key={_id} className={style.optionInput}>
                     {type === "text" && (
