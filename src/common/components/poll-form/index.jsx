@@ -241,7 +241,7 @@ const PollForm = ({ name }) => {
         <h3>Congrats your Quiz is Published!</h3>
         <input
           type="text"
-          value={`https://frontend-quizzie-m83lkudly-suman138-bbs.vercel.app/live-poll/${quizSuccess.id}`}
+          value={`https://frontend-quizzie.vercel.app/live-poll/${quizSuccess.id}`}
           ref={urlRef}
         />
         <div>
