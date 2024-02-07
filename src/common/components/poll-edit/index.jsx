@@ -78,36 +78,56 @@ const PollEdit = ({ analysisId }) => {
           <h4>Options</h4>
           <div>
             {poll.polls[current].options.map(
-              ({ _id, option, imageUrl }, optionIndex) => (
+              ({ _id, option, imageUrl, type }, optionIndex) => (
                 <div key={_id} className={style.optionInput}>
-                  <div>
-                    <p>Option Text</p>
-                    <input
-                      type="text"
-                      value={option}
-                      onChange={(e) =>
-                        handleOptionChange(
-                          optionIndex,
-                          e.target.value,
-                          "option"
-                        )
-                      }
-                    />
-                  </div>
-                  <div>
-                    <p>Image Url</p>
-                    <input
-                      type="text"
-                      value={imageUrl}
-                      onChange={(e) =>
-                        handleOptionChange(
-                          optionIndex,
-                          e.target.value,
-                          "imageUrl"
-                        )
-                      }
-                    />
-                  </div>
+                  {type === "text" && (
+                    <div>
+                      <p>Option Text</p>
+                      <input
+                        type="text"
+                        value={option}
+                        onChange={(e) =>
+                          handleOptionChange(
+                            optionIndex,
+                            e.target.value,
+                            "option"
+                          )
+                        }
+                      />
+                    </div>
+                  )}
+                  {type === "txtAndImg" && (
+                    <div>
+                      <p>Option Text</p>
+                      <input
+                        type="text"
+                        value={option}
+                        onChange={(e) =>
+                          handleOptionChange(
+                            optionIndex,
+                            e.target.value,
+                            "option"
+                          )
+                        }
+                      />
+                    </div>
+                  )}
+                  {type !== "text" && (
+                    <div>
+                      <p>Image Url</p>
+                      <input
+                        type="text"
+                        value={imageUrl}
+                        onChange={(e) =>
+                          handleOptionChange(
+                            optionIndex,
+                            e.target.value,
+                            "imageUrl"
+                          )
+                        }
+                      />
+                    </div>
+                  )}
                 </div>
               )
             )}

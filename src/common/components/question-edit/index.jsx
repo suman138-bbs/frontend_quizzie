@@ -83,34 +83,55 @@ const EditQuestion = ({ analysisId }) => {
               ({ _id, option, imageUrl }, optionIndex) => {
                 return (
                   <div key={_id} className={style.optionInput}>
-                    <div>
-                      <p>Option Text</p>
-                      <input
-                        type="text"
-                        value={option}
-                        onChange={(e) =>
-                          handleOptionChange(
-                            optionIndex,
-                            e.target.value,
-                            "option"
-                          )
-                        }
-                      />
-                    </div>
-                    <div>
-                      <p>Image Url</p>
-                      <input
-                        type="text"
-                        value={imageUrl}
-                        onChange={(e) =>
-                          handleOptionChange(
-                            optionIndex,
-                            e.target.value,
-                            "imageUrl"
-                          )
-                        }
-                      />
-                    </div>
+                    {type === "text" && (
+                      <div>
+                        <p>Option Text</p>
+                        <input
+                          type="text"
+                          value={option}
+                          onChange={(e) =>
+                            handleOptionChange(
+                              optionIndex,
+                              e.target.value,
+                              "option"
+                            )
+                          }
+                        />
+                      </div>
+                    )}
+
+                    {type === "txtAndImg" && (
+                      <div>
+                        <p>Option Text</p>
+                        <input
+                          type="text"
+                          value={option}
+                          onChange={(e) =>
+                            handleOptionChange(
+                              optionIndex,
+                              e.target.value,
+                              "option"
+                            )
+                          }
+                        />
+                      </div>
+                    )}
+                    {type !== "text" && (
+                      <div>
+                        <p>Image Url</p>
+                        <input
+                          type="text"
+                          value={imageUrl}
+                          onChange={(e) =>
+                            handleOptionChange(
+                              optionIndex,
+                              e.target.value,
+                              "imageUrl"
+                            )
+                          }
+                        />
+                      </div>
+                    )}
                   </div>
                 );
               }
