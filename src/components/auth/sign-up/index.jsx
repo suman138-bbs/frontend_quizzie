@@ -21,8 +21,10 @@ const SignUp = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("DATA", data);
-    if (!data.email && !data.password) {
+    if (!data.name) {
+      setErrors("Please provide Valid Name");
+      return;
+    } else if (!data.email && !data.password) {
       setErrors("Please provide email and password");
       return;
     } else if (!isValidEmail(data.email)) {
