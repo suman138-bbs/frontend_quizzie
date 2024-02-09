@@ -56,7 +56,6 @@ const Analytics = () => {
         toast.success("URL copied to clipboard!");
       })
       .catch((error) => {
-        console.error("Error copying to clipboard:", error);
         toast.error("Error copying to clipboard");
       });
   };
@@ -117,7 +116,7 @@ const Analytics = () => {
         edit !== "quiz" &&
         edit !== "poll" && (
           <div className={style.analyticsContainer}>
-            <h1>Quiz and Poll Analysis</h1>
+            <h1>Quiz Analysis</h1>
             <table>
               <thead>
                 <tr>
@@ -125,8 +124,8 @@ const Analytics = () => {
                   <th>Name</th>
                   <th>Created on</th>
                   <th>Impression</th>
-                  <th>Actions</th>
-                  <th>Analysis</th>
+                  <th></th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -208,7 +207,7 @@ const Analytics = () => {
                 ))}
               </tbody>
             </table>
-            <img src="https://www.w3schools.com/images/lamp.jpg" alt="" />
+
             {dlt.id && (
               <div className={style.createDeleteContainer}>
                 <div>
