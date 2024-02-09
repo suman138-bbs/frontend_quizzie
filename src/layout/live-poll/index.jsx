@@ -99,7 +99,11 @@ const LivePoll = () => {
                           handleSelectOption(index);
                         }}
                       >
-                        <img src={option.imageUrl} alt="" />
+                        <img
+                          src={option.imageUrl}
+                          alt=""
+                          className="optionImage"
+                        />
                       </button>
                     </div>
                   );

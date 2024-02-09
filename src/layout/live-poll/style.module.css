@@ -74,6 +74,12 @@
   color: #60b84b;
 }
 
+.optionImage {
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 1000px) {
   .scoreContainer > img {
     height: 15rem;
