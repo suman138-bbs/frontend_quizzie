@@ -292,7 +292,7 @@ const PollForm = ({ name }) => {
                   <input
                     type="text"
                     placeholder="Question Name"
-                    value={quizForms[index].questionText}
+                    value={quizForms[index].pollText}
                     onChange={(e) => {
                       handleQueInputChange(index, e.target.value);
                     }}
