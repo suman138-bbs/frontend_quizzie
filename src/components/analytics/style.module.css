@@ -81,7 +81,9 @@ tbody > tr > td:nth-child(5) > img {
 .createDeleteContainer > div > div > button:first-child {
   background-color: #ff4b4b;
   color: #fff;
+  cursor: pointer;
 }
 .createDeleteContainer > div > div > button:last-child {
   padding: 0.7rem 4rem;
+  cursor: pointer;
 }
