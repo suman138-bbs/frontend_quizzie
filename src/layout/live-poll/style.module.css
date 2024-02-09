@@ -74,7 +74,7 @@
   color: #60b84b;
 }
 
-.optionImage {
+.optionContainer .optionImage {
   height: 2rem;
   width: 2rem;
   object-fit: cover;
